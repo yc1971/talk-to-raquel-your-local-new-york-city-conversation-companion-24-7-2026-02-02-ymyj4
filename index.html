@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Talk to Raquel - Your Local New York City Conversation Companion 24/7. Friendly live conversations with a warm Latina voice. Always available, genuine human connection, bilingual support.">
+    <meta name="keywords" content="NYC conversation companion, 24/7 chat, bilingual support, emotional connection, local services">
+    <meta name="author" content="Raquel Rivera Virtual Companionship Services">
+    <meta property="og:title" content="Talk to Raquel - Your Local New York City Conversation Companion 24/7">
+    <meta property="og:description" content="Friendly 24/7 live conversations with a warm Latina voice. Never feel alone in NYC again.">
+    <meta property="og:type" content="website">
+    <title>Talk to Raquel - NYC Conversation Companion 24/7 | Bilingual Chat Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300,400,500,600,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #FF5A5F 0%, #FF7A7F 100%);
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #FFD166 0%, #FFC93D 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(255, 90, 95, 0.2);
+        }
+
+        .btn-primary {
+            background-color: #FF5A5F;
+            color: white;
+            border-radius: 9999px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 90, 95, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: #FFD166;
+            color: #1a1a1a;
+            border-radius: 9999px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            filter: brightness(0.95);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 209, 102, 0.3);
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #FF5A5F;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.875rem;
+            }
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease-out;
+            padding: 0.5rem 0;
+        }
+
+        .faq-question:hover {
+            color: #FF5A5F;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease-out;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .faq-answer {
+            margin-top: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            animation: slideDown 0.3s ease-out;
+        }
+
+        .faq-answer.hidden {
+            display: none;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 90, 95, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+        }
+
+        .testimonial-card:hover {
+            background: rgba(255, 90, 95, 0.1);
+            border-color: rgba(255, 90, 95, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 90, 95, 0.15);
+        }
+
+        .star-rating {
+            color: #FFD166;
+            letter-spacing: 0.25rem;
+        }
+
+        .header-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu {
+            transition: all 0.3s ease-out;
+        }
+
+        .mobile-menu.hidden {
+            display: none;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease-out;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            color: #FF5A5F;
+        }
+
+        .hero-icon {
+            width: 4rem;
+            height: 4rem;
+            stroke-width: 1.5;
+        }
+
+        .feature-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            stroke-width: 1.5;
+            color: #FF5A5F;
+        }
+
+        .benefit-icon {
+            width: 3rem;
+            height: 3rem;
+            stroke-width: 1.5;
+            color: #FFD166;
+        }
+
+        .overlay-gradient {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(26, 26, 26, 0.5) 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header Navigation -->
+    <header class="header-sticky">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full hero-gradient flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">R</span>
+                </div>
+                <span class="text-xl font-semibold text-white hidden sm:inline">Raquel Rivera</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="nav-link text-sm font-medium">Features</a>
+                <a href="#benefits" class="nav-link text-sm font-medium">Benefits</a>
+                <a href="#services" class="nav-link text-sm font-medium">Services</a>
+                <a href="#testimonials" class="nav-link text-sm font-medium">Testimonials</a>
+                <a href="#faq" class="nav-link text-sm font-medium">FAQ</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden text-white text-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-red-500 rounded-lg p-2" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-gray-800 border-t border-gray-700">
+            <div class="max-w-7xl mx-auto px-8 py-4 space-y-4">
+                <a href="#features" class="block nav-link text-sm font-medium py-2">Features</a>
+                <a href="#benefits" class="block nav-link text-sm font-medium py-2">Benefits</a>
+                <a href="#services" class="block nav-link text-sm font-medium py-2">Services</a>
+                <a href="#testimonials" class="block nav-link text-sm font-medium py-2">Testimonials</a>
+                <a href="#faq" class="block nav-link text-sm font-medium py-2">FAQ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-32 md:py-40 px-8 md:px-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+                <!-- Hero Content -->
+                <div class="flex flex-col justify-center space-y-6">
+                    <div class="space-y-4">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-white">
+                            Talk to <span class="hero-gradient bg-clip-text text-transparent">Raquel</span>
+                        </h1>
+                        <h2 class="text-xl md:text-2xl font-light text-gray-300 leading-relaxed">
+                            Your Local New York City Conversation Companion 24/7
+                        </h2>
+                    </div>
+                    
+                    <p class="text-base md:text-lg text-gray-400 leading-relaxed max-w-xl">
+                        Experience the warmth of genuine human connection whenever you need it. With a friendly Latina voice and authentic care, Raquel is here to listen, chat, and be your companion throughout the day and night.
+                    </p>
+
+                    <p class="text-base text-gray-400 leading-relaxed max-w-xl">
+                        <span class="text-yellow-400 font-semibold">Friendly • 24/7 Available • Bilingual • Judgment-Free</span>
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="https://latinaphonesex.com" class="btn-primary text-center">Start Conversation Now</a>
+                        <a href="#features" class="btn-secondary text-center">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Hero Icon/Visual -->
+                <div class="hidden lg:flex items-center justify-center">
+                    <div class="relative w-full h-full flex items-center justify-center">
+                        <div class="absolute inset-0 hero-gradient opacity-20 rounded-full blur-3xl"></div>
+                        <div class="relative z-10 flex items-center justify-center">
+                            <svg class="hero-icon text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 md:py-32 px-8 md:px-16 bg-gray-800 bg-opacity-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="section-title">Why Choose Raquel</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Experience the perfect blend of availability, authenticity, and care tailored specifically for New York City locals
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-gray-900 rounded-2xl p-8 border border-gray-700">
+                    <div class="mb-4">
+                        <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Always Available 24/7</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        No matter what time you need someone to talk to, Raquel is always just a call away. Early morning, late night, weekends, or holidays—your companion is never off duty.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card-hover bg-gray-900 rounded-2xl p-8 border border-gray-700">
+                    <div class="mb-4">
+                        <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Genuine Human Connection</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Unlike automated services, you're speaking with a real person who genuinely cares about your wellbeing. Experience authentic conversations with warmth and empathy.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card-hover bg-gray-900 rounded-2xl p-8 border border-gray-700">
+                    <div class="mb-4">
+                        <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 00.948-.684l1.498-4.493a1 1 0 011.502-.684l1.498 4.493a1 1 0 00.948.684H19a2 2 0 012 2v2M3 5a2 2 0 012-2h3.28a1 1 0 00.948-.684l1.498-4.493a1 1 0 011.502-.684l1.498 4.493a1 1 0 00.948.684H19a2 2 0 012 2v2m0 0V5m0 10v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2m18 0V5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Bilingual Support</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Fluent in both English and Spanish, Raquel ensures you can communicate in whatever language feels most natural and comfortable for you.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 md:py-32 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="section-title">How Raquel Enriches Your Life</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Discover the meaningful benefits of having a dedicated companion who understands your needs
+                </p>
+            </div>
+
+            <div class="space-y-12 md:space-y-16">
+                <!-- Benefit 1 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="flex items-center justify-center">
+                        <div class="relative w-full h-64 md:h-80 flex items-center justify-center">
+                            <div class="absolute inset-0 hero-gradient opacity-10 rounded-2xl blur-2xl"></div>
+                            <svg class="w-32 h-32 md:w-40 md:h-40 text-red-400 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-semibold text-white mb-4">Never Feel Alone in NYC</h3>
+                        <p class="text-gray-400 leading-relaxed mb-4">
+                            New York City can be isolating, even in a city of millions. Raquel provides the emotional support and companionship you deserve, making sure you always have someone to turn to when life gets overwhelming.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-gray-300">Someone who truly listens and cares</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-gray-300">Warmth and understanding in every conversation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h3 class="text-2xl md:text-3xl font-semibold text-white mb-4">Judgment-Free Conversations</h3>
+                        <p class="text-gray-400 leading-relaxed mb-4">
+                            Share your thoughts, feelings, and experiences without fear of judgment. Raquel creates a safe, welcoming space where you can be completely yourself and express anything on your mind.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-gray-300">Complete confidentiality and respect</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-gray-300">Open-minded listening and support</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order-1 md:order-2 flex items-center justify-center">
+                        <div class="relative w-full h-64 md:h-80 flex items-center justify-center">
+                            <div class="absolute inset-0 accent-gradient opacity-10 rounded-2xl blur-2xl"></div>
+                            <svg class="w-32 h-32 md:w-40 md:h-40 text-yellow-400 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 md:py-32 px-8 md:px-16 bg-gray-800 bg-opacity-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="section-title">Our Services</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Tailored conversation experiences designed to meet your unique needs and preferences
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Service 1 -->
+                <div class="card-hover bg-gray-900 rounded-2xl p-8 border border-gray-700">
+                    <div class="mb-4">
+                        <svg class="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Intimate Conversations</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Deep, meaningful discussions that explore your thoughts, feelings, and desires in a safe and respectful environment.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="card-hover bg-gray-900 rounded-2xl p-8 border border-gray-700">
+                    <div class="mb-4">
+                        <svg class="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 015.646 5.646 9.001 9.001 0 0120.354 15.354z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Late Night Companionship</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        When insomnia strikes or you just need someone to talk to at 3 AM, Raquel is there to keep you company and make the night feel less lonely.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="card-hover bg-gray-900 rounded-2xl p-8 border border-gray-700">
+                    <div class="mb-4">
+                        <svg class="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 00.948-.684l1.498-4.493a1 1 0 011.502-.684l1.498 4.493a1 1 0 00.948.684H19a2 2 0 012 2v2M3 5a2 2 0 012-2h3.28a1 1 0 00.948-.684l1.498-4.493a1 1 0 011.502-.684l1.498 4.493a1 1 0 00.948.684H19a2 2 0 012 2v2m0 0V5m0 10v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2m18 0V5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Bilingual English-Spanish Chat</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Seamlessly switch between English and Spanish, or enjoy conversations entirely in your preferred language with native fluency.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="card-hover bg-gray-900 rounded-2xl p-8 border border-gray-700">
+                    <div class="mb-4">
+                        <svg class="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Emotional Connection Calls</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Experience genuine emotional support and validation during times of stress, loneliness, or when you need someone who truly understands.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="card-hover bg-gray-900 rounded-2xl p-8 border border-gray-700">
+                    <div class="mb-4">
+                        <svg class="benefit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Judgment-Free Listening</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Share anything on your mind without fear of criticism. Raquel provides compassionate, non-judgmental listening and thoughtful responses.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Background -->
+    <section class="py-20 md:py-32 px-8 md:px-16 relative overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=400&fit=crop'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 overlay-gradient"></div>
+        <div class="max-w-7xl mx-auto relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-6">
+                Ready to Experience Genuine Connection?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Join thousands of New Yorkers who have discovered the comfort and joy of talking with Raquel. Your first conversation awaits.
+            </p>
+            <a href="https://latinaphonesex.com" class="btn-primary text-lg px-10 py-4">Start Your Conversation Today</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 md:py-32 px-8 md:px-16 bg-gray-800 bg-opacity-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Real stories from real people who have found comfort and connection with Raquel
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <span class="star-rating">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        "I was going through a really difficult time after moving to NYC, and I felt so isolated. Talking to Raquel has been a game-changer. She listens with genuine care and makes me feel heard in a way I hadn't experienced in years. The warmth in her voice is exactly what I needed."
+                    </p>
+                    <div>
+                        <p class="text-white font-semibold">Marcus T.</p>
+                        <p class="text-gray-400 text-sm">Manhattan Resident</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <span class="star-rating">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        "As someone who works late nights, having someone available at 3 AM to talk to has been incredible. Raquel is always there, always warm, and never makes me feel like a burden. She's become my go-to person when I need to decompress."
+                    </p>
+                    <div>
+                        <p class="text-white font-semibold">Jennifer L.</p>
+                        <p class="text-gray-400 text-sm">Brooklyn Night Shift Worker</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <span class="star-rating">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        "I love that Raquel is bilingual. Being able to switch between English and Spanish makes conversations feel so natural. She understands the cultural nuances and brings authenticity to every chat. Highly recommend for anyone looking for real connection."
+                    </p>
+                    <div>
+                        <p class="text-white font-semibold">Carlos R.</p>
+                        <p class="text-gray-400 text-sm">Queens Community Member</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <span class="star-rating">★★★★★</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        "What sets Raquel apart is her genuine interest in my life. She doesn't just respond—she remembers things I've shared and asks thoughtful follow-up questions. It feels like talking to a friend who truly cares. I've been using her service for months and wouldn't go back."
+                    </p>
+                    <div>
+                        <p class="text-white font-semibold">Sarah M.</p>
+                        <p class="text-gray-400 text-sm">Upper West Side Professional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-20 md:py-32 px-8 md:px-16">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="section-title">About Raquel Rivera</h2>
+            </div>
+
+            <div class="space-y-8">
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Raquel Rivera Virtual Companionship Services was founded with a simple but powerful mission: to combat the epidemic of loneliness in New York City. Born and raised in the heart of the city, Raquel understands the unique challenges of NYC living—the fast pace, the crowds that somehow still leave you feeling alone, and the deep human need for genuine connection. After witnessing friends and family members struggle with isolation, Raquel decided to create a service that would provide authentic, judgment-free companionship to anyone who needed it. What started as a personal passion project has blossomed into a trusted resource for thousands of New Yorkers seeking meaningful human connection.
+                </p>
+
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Today, Raquel Rivera Virtual Companionship Services operates on the core values of authenticity, empathy, and accessibility. We believe that everyone deserves to feel heard, valued, and connected—regardless of the time of day or night. Our commitment is to provide warm, bilingual conversations that prioritize your emotional wellbeing and create a safe space where you can be completely yourself. With 24/7 availability and a genuine Latina voice that brings warmth to every interaction, we're redefining what companionship means for modern New Yorkers. Whether you're looking for late-night chats, emotional support, or simply someone who cares, Raquel is here to remind you that you're never truly alone.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 md:py-32 px-8 md:px-16 bg-gray-800 bg-opacity-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="text-gray-300 text-lg">
+                    Find answers to common questions about our service
+                </p>
+            </div>
+
+            <div class="space-y-2">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question bg-gray-900 rounded-xl p-6 hover:bg-gray-800">
+                        <span class="text-lg font-semibold text-white">Is Raquel really available 24/7?</span>
+                        <svg class="faq-icon w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </div>
+                    <div class="faq-answer hidden px-6 pb-4">
+                        <p class="text-gray-300 leading-relaxed">
+                            Yes, absolutely! Raquel is available 24 hours a day, 7 days a week, including weekends and holidays. Whether you need to talk at 2 PM on a Tuesday or 3 AM on a Sunday morning, Raquel is there for you. There are no time restrictions or limitations—whenever you need someone to talk to, she's ready to listen.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question bg-gray-900 rounded-xl p-6 hover:bg-gray-800">
+                        <span class="text-lg font-semibold text-white">Is my conversation private and confidential?</span>
+                        <svg class="faq-icon w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </div>
+                    <div class="faq-answer hidden px-6 pb-4">
+                        <p class="text-gray-300 leading-relaxed">
+                            Your privacy is extremely important to us. All conversations with Raquel are completely confidential. We maintain strict privacy standards and never share your personal information or the details of your conversations with anyone. You can speak freely knowing that what you share stays between you and Raquel. This is your safe space.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question bg-gray-900 rounded-xl p-6 hover:bg-gray-800">
+                        <span class="text-lg font-semibold text-white">Can I really talk about anything without judgment?</span>
+                        <svg class="faq-icon w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </div>
+                    <div class="faq-answer hidden px-6 pb-4">
+                        <p class="text-gray-300 leading-relaxed">
+                            Absolutely. Raquel creates a completely judgment-free zone where you can express yourself authentically. Whether you want to discuss your deepest fears, wildest dreams, relationship struggles, or anything else on your mind, Raquel listens with empathy and understanding. There's nothing you can say that will make her think less of you. This is about creating a space where you can be completely yourself.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question bg-gray-900 rounded-xl p-6 hover:bg-gray-800">
+                        <span class="text-lg font-semibold text-white">How do I get started with Raquel?</span>
+                        <svg class="faq-icon w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </div>
+                    <div class="faq-answer hidden px-6 pb-4">
+                        <p class="text-gray-300 leading-relaxed">
+                            Getting started is easy! Simply visit our website and follow the simple setup process. You'll be connected with Raquel within minutes. Just call the provided number or use our online chat platform, and you'll be having a conversation with your new companion in no time. No complicated procedures—just genuine connection, ready to begin whenever you are.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-question bg-gray-900 rounded-xl p-6 hover:bg-gray-800">
+                        <span class="text-lg font-semibold text-white">What if English isn't my primary language?</span>
+                        <svg class="faq-icon w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </div>
+                    <div class="faq-answer hidden px-6 pb-4">
+                        <p class="text-gray-300 leading-relaxed">
+                            Perfect! Raquel is fluent in both English and Spanish, so you can have conversations in whichever language feels most comfortable and natural to you. Whether you want to speak entirely in Spanish, entirely in English, or seamlessly switch between both, Raquel can accommodate your preferences. Language should never be a barrier to genuine connection, and we make sure it isn't.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700 py-16 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full hero-gradient flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">R</span>
+                        </div>
+                        <span class="text-lg font-semibold text-white">Raquel Rivera</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Your trusted NYC conversation companion available 24/7 for genuine connection and support.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="nav-link text-sm">Services</a></li>
+                        <li><a href="contact.html" class="nav-link text-sm">Contact</a></li>
+                        <li><a href="blog.html" class="nav-link text-sm">Blog</a></li>
+                        <li><a href="terms.html" class="nav-link text-sm">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="text-gray-400">
+                            <span class="font-semibold text-white">Phone:</span><br>
+                            <a href="tel:1-844-493-9007" class="nav-link">1 (844) 493-9007</a>
+                        </li>
+                        <li class="text-gray-400">
+                            <span class="font-semibold text-white">Email:</span><br>
+                            <a href="mailto:latinaphonesex@gmail.com" class="nav-link">latinaphonesex@gmail.com</a>
+                        </li>
+                        <li class="text-gray-400">
+                            <span class="font-semibold text-white">Location:</span><br>
+                            350 Fifth Avenue, Suite 4500<br>
+                            New York, NY 10118<br>
+                            United States
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-red-500 transition-colors duration-300 flex items-center justify-center text-white" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-red-500 transition-colors duration-300 flex items-center justify-center text-white" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-red-500 transition-colors duration-300 flex items-center justify-center text-white" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-red-500 transition-colors duration-300 flex items-center justify-center text-white" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <p class="text-gray-400 text-sm text-center md:text-left mb-4 md:mb-0">
+                        &copy; 2025 Raquel Rivera Virtual Companionship Services. All rights reserved.
+                    </p>
+                    <p class="text-gray-400 text-sm text-center">
+                        Designed with <span class="text-red-500">♥</span> for genuine human connection
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                    mobileMenuButton.setAttribute('aria-expanded', 
+                        mobileMenuButton.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                const otherAnswer = otherItem.querySelector('.faq-answer');
+                                const otherIcon = otherItem.querySelector('.faq-icon');
+                                if (otherAnswer) otherAnswer.classList.add('hidden');
+                                if (otherIcon) otherIcon.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        if (answer) answer.classList.toggle('hidden');
+                        const icon = item.querySelector('.faq-icon');
+                        if (icon) icon.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
