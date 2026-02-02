@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Raquel's Services - 24/7 Conversation Companion in NYC. Intimate conversations, late night companionship, bilingual chat, and emotional connection calls.">
+    <meta name="keywords" content="conversation services, NYC companion, bilingual chat, emotional support, 24/7 availability">
+    <meta name="author" content="Raquel Rivera Virtual Companionship Services">
+    <meta property="og:title" content="Our Services - Talk to Raquel">
+    <meta property="og:description" content="Discover Raquel's range of conversation and companionship services available 24/7.">
+    <meta property="og:type" content="website">
+    <title>Our Services - Talk to Raquel | NYC Conversation Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300,400,500,600,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #FF5A5F 0%, #FF7A7F 100%);
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #FFD166 0%, #FFC93D 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(255, 90, 95, 0.2);
+        }
+
+        .btn-primary {
+            background-color: #FF5A5F;
+            color: white;
+            border-radius: 9999px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 90, 95, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: #FFD166;
+            color: #1a1a1a;
+            border-radius: 9999px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            filter: brightness(0.95);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 209, 102, 0.3);
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #FF5A5F;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.875rem;
+            }
+        }
+
+        .header-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease-out;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            color: #FF5A5F;
+        }
+
+        .hero-icon {
+            width: 4rem;
+            height: 4rem;
+            stroke-width: 1.5;
+        }
+
+        .feature-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            stroke-width: 1.5;
+            color: #FF5A5F;
+        }
+
+        .service-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            stroke-width: 1.5;
+            color: #FFD166;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 90, 95, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+        }
+
+        .service-card:hover {
+            background: rgba(255, 90, 95, 0.1);
+            border-color: rgba(255, 90, 95, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(255, 90, 95, 0.15);
+        }
+
+        .overlay-gradient {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(26, 26, 26, 0.5) 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header Navigation -->
+    <header class="header-sticky">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-4 flex items-center justify-between">
+            <div class="flex items-center justify-between w-full">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full hero-gradient flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">R</span>
+                    </div>
+                    <span class="text-xl font-semibold text-white hidden sm:inline">Raquel Rivera</span>
+                </a>
+                <a href="index.html" class="nav-link text-sm font-medium">← Back</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-white mb-6">
+                Our <span class="hero-gradient bg-clip-text text-transparent">Services</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-light text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                Discover the diverse range of conversation and companionship services designed to enrich your life and provide genuine human connection whenever you need it.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 md:py-32 px-8 md:px-16 bg-gray-800 bg-opacity-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="section-title">What We Offer</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Each service is tailored to provide authentic, caring conversation and companionship
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Service 1: Intimate Conversations -->
+                <div class="service-card card-hover">
+                    <div class="mb-6">
+                        <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Intimate Conversations</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Experience deep, meaningful conversations with a warm and attentive listener. Share your thoughts, dreams, and feelings in a judgment-free environment where your voice truly matters.
+                    </p>
+                </div>
+
+                <!-- Service 2: Late Night Companionship -->
+                <div class="service-card card-hover">
+                    <div class="mb-6">
+                        <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 015.646 5.646 9.001 9.001 0 0020.354 15.354z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Late Night Companionship</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Can't sleep? Need someone to talk to at 3 AM? Raquel is always available for those late-night conversations when you need comfort, support, or just someone to listen.
+                    </p>
+                </div>
+
+                <!-- Service 3: Bilingual English-Spanish Chat -->
+                <div class="service-card card-hover">
+                    <div class="mb-6">
+                        <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 00.948-.684l1.498-4.493a1 1 0 011.502-.684l1.498 4.493a1 1 0 00.948.684H19a2 2 0 012 2v2M3 5a2 2 0 012-2h3.28a1 1 0 00.948-.684l1.498-4.493a1 1 0 011.502-.684l1.498 4.493a1 1 0 00.948.684H19a2 2 0 012 2v2m0 0V5m0 10v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2m18 0V5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Bilingual English-Spanish Chat</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Communicate in whichever language feels most natural to you. Raquel is fluent in both English and Spanish, ensuring you can express yourself comfortably and authentically.
+                    </p>
+                </div>
+
+                <!-- Service 4: Emotional Connection Calls -->
+                <div class="service-card card-hover">
+                    <div class="mb-6">
+                        <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Emotional Connection Calls</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Sometimes you need more than just conversation—you need genuine emotional support. Raquel provides compassionate listening and caring dialogue that truly understands your needs.
+                    </p>
+                </div>
+
+                <!-- Service 5: Judgment-Free Listening -->
+                <div class="service-card card-hover">
+                    <div class="mb-6">
+                        <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Judgment-Free Listening</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Share anything on your mind without fear of judgment. Raquel creates a safe, accepting space where you can be completely yourself and express your true thoughts and feelings.
+                    </p>
+                </div>
+
+                <!-- Service 6: 24/7 Availability -->
+                <div class="service-card card-hover">
+                    <div class="mb-6">
+                        <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">24/7 Availability</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Day or night, weekday or weekend, holiday or regular day—Raquel is always available when you need her. No scheduling conflicts, no waiting, just instant companionship and conversation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 md:py-32 px-8 md:px-16">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">Ready to Connect?</h2>
+            <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                Start your journey to genuine human connection today. Whether you're looking for a late-night chat, emotional support, or just someone to talk to, Raquel is here for you.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://latinaphonesex.com" class="btn-primary text-center">Start Conversation Now</a>
+                <a href="contact.html" class="btn-secondary text-center">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 bg-opacity-50 border-t border-gray-700 py-12 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand Column -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 rounded-full hero-gradient flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">R</span>
+                        </div>
+                        <span class="text-lg font-semibold text-white">Raquel Rivera</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Your trusted NYC conversation companion available 24/7 for genuine human connection.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-red-400 transition text-sm">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-red-400 transition text-sm">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-red-400 transition text-sm">Contact</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-red-400 transition text-sm">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-red-400 transition text-sm">Intimate Conversations</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-red-400 transition text-sm">Late Night Chat</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-red-400 transition text-sm">Bilingual Support</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-red-400 transition text-sm">Emotional Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Get In Touch</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400 text-sm">
+                            <span class="font-semibold">Location:</span> New York City, NY
+                        </li>
+                        <li class="text-gray-400 text-sm">
+                            <span class="font-semibold">Availability:</span> 24/7
+                        </li>
+                        <li class="text-gray-400 text-sm">
+                            <span class="font-semibold">Languages:</span> English, Spanish
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 text-sm text-center md:text-left">
+                        © 2024 Raquel Rivera - NYC Conversation Companion. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-red-400 transition text-sm">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-red-400 transition text-sm">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-red-400 transition text-sm">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
